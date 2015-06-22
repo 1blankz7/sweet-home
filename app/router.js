@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('chat');
   this.route('books');
   this.route('movies');
+  this.route('login');
 });
 
 export default Router;

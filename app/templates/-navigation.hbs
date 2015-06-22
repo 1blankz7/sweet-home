@@ -1,7 +1,12 @@
-<div class="icon-bar five-up">
-  {{#link-to 'index' class="item"}}Home{{/link-to}}
-  {{#link-to 'books' class="item"}}Books{{/link-to}}
-  {{#link-to 'movies' class="item"}}Movies{{/link-to}}
-  {{#link-to 'chat' class="item"}}Chat{{/link-to}}
-  {{#link-to 'settings' class="item"}}Settings{{/link-to}}
+<div class="icon-bar six-up">
+  {{#link-to 'index' class="item"}}<label>Home</label>{{/link-to}}
+  {{#link-to 'books' class="item"}}<label>Books</label>{{/link-to}}
+  {{#link-to 'movies' class="item"}}<label>Movies</label>{{/link-to}}
+  {{#link-to 'chat' class="item"}}<label>Chat</label>{{/link-to}}
+  {{#link-to 'settings' class="item"}}<label>Settings</label>{{/link-to}}
+  {{#if session.isAuthenticated}}
+    <a {{ action 'invalidateSession' }} class="item"><label>Logout</label></a>
+  {{else}}
+    {{#link-to 'login' class="item"}}<label>Login</label>{{/link-to}}
+  {{/if}}
 </div>
