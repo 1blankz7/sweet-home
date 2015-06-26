@@ -6,14 +6,15 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('posts', function() {
-    this.route('create');
-  });
   this.route('settings');
   this.route('chat');
   this.route('books');
   this.route('movies');
   this.route('login');
+  this.route('recipes', function() {
+    this.route('add');
+    this.route('show', '/:id');
+  });
 });
 
 export default Router;

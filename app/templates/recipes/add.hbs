@@ -1,0 +1,34 @@
+<h2>Hinzufügen eines neuen Rezeptes</h2>
+
+<div class="col-md-8">
+    <form class="form-horizontal" role="form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        {{input type="text" value=model.name class="form-control" id="name" placeholder="Rezeptname"}}
+      </div>
+      <div class="form-group">
+        <label for="description">Beschreibung</label>
+        {{input type="text" value=model.description class="form-control" id="description" placeholder="Eine kurze Beschreibung"}}
+      </div>
+      <div class="form-group">
+        <label for="tags">Tags</label>
+        <input type="text" id="tags" class="form-control">
+        <p class="help-block">Liste von Tags, die mit Semikolon separiert sind (Bsp: <code>italienisch;mediterran</code>)</p>
+      </div>
+      <div class="form-group">
+        <label for="ingredients">Liste von Zutaten</label>
+        <textarea placeholder="3 : Eier : mitelgroß" id="ingredients" class="form-control" rows="5"></textarea>
+        <p class="help-block">Liste von Zutaten mit folgendem Aufbau <code>[Menge] : [Zutat] : [Beschreibung]</code>. Jede weitere Zutat erhält eine neue Zeile. Die Beschreibung ist optional.</p>
+      </div>
+      <div class="form-group">
+        <label for="instructions">Anleitung</label>
+        {{textarea value=model.instructions placeholder="Ausführliche Kochanleitung" id="instructions" class="form-control" rows="5"}}
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-3">
+          <button type="submit" class="btn btn-success" {{action 'save'}}>Speichern</button>
+        </div>
+      </div>
+    </form>
+</div>
