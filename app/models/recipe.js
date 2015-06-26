@@ -5,8 +5,7 @@ export default DS.Model.extend({
   //tags: DS.hasMany('ingredient', {async: true}),
   description: DS.attr('string'),
   main_image: DS.attr('string'),
-  more_images: DS.attr(),
-  instructions: DS.attr('string'),
+  instructions: DS.attr('string')
   //ingredients: DS.hasMany('ingredient', {async: true}),
   //author: DS.belongsTo('user', {async: true})
 });

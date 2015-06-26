@@ -13,7 +13,7 @@ Router.map(function() {
   this.route('login');
   this.route('recipes', function() {
     this.route('add');
-    this.route('show', '/:id');
+    this.route('show', { path: '/:id' });
   });
 });
 

@@ -1,0 +1,15 @@
+<p>Anzahl: {{model.length}}</p>
+
+<div class="col-md-offset-9">
+  {{#link-to 'recipes.add' class="button"}}
+      <span class="glyphicon glyphicon-plus"></span> Neues Rezept hinzufügen
+  {{/link-to}}
+</div>
+
+<div class="list-group">
+  {{#each recipe in model}}
+    {{#link-to 'recipes.show' recipe class="list-group-item"}}
+      {{recipe.name}}
+    {{/link-to}}
+  {{/each}}
+</div>

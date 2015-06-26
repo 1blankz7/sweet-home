@@ -1,5 +1,5 @@
 {{#each post in model}}
-  <p><span>{{time-ago-in-words post.createdAt}}</span>{{post.text}}</p>
+  <p><span class="label info">{{time-ago-in-words post.createdAt}}</span>{{post.text}}</p>
 {{/each}}
 
 <form {{action "send" on="submit"}}>
