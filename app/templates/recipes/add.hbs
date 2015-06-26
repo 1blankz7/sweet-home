@@ -11,14 +11,9 @@
         {{input type="text" value=model.description class="form-control" id="description" placeholder="Eine kurze Beschreibung"}}
       </div>
       <div class="form-group">
-        <label for="tags">Tags</label>
-        <input type="text" id="tags" class="form-control">
-        <p class="help-block">Liste von Tags, die mit Semikolon separiert sind (Bsp: <code>italienisch;mediterran</code>)</p>
-      </div>
-      <div class="form-group">
         <label for="ingredients">Liste von Zutaten</label>
-        <textarea placeholder="3 : Eier : mitelgroß" id="ingredients" class="form-control" rows="5"></textarea>
-        <p class="help-block">Liste von Zutaten mit folgendem Aufbau <code>[Menge] : [Zutat] : [Beschreibung]</code>. Jede weitere Zutat erhält eine neue Zeile. Die Beschreibung ist optional.</p>
+        {{textarea placeholder="3 : Milch : EL" id="ingredients" class="form-control" rows="5" value=model.ingredients }}
+        <p class="help-block">Liste von Zutaten mit folgendem Aufbau <code>[Menge] : [Zutat] : [Einheit]</code>. Jede weitere Zutat erhält eine neue Zeile. Die Beschreibung ist optional.</p>
       </div>
       <div class="form-group">
         <label for="instructions">Anleitung</label>

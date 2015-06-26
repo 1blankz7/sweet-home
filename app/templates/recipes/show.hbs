@@ -1,1 +1,14 @@
-{{model.name}}
+<h3>{{model.name}}</h3>
+<h4 class="subheader">{{model.description}}</h4>
+<hr/>
+<h5>Zutaten</h5>
+<ul>
+  {{#each model.ingredients as |ingredient|}}
+  <li>{{ingredient.count}} {{ingredient.unit}} {{ingredient.name}}</li>
+  {{/each}}
+</ul>
+<hr/>
+<h5>Zubereitung</h5>
+<blockquote>
+  {{model.instructions}}
+</blockquote>
