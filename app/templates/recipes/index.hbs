@@ -6,10 +6,10 @@
   {{/link-to}}
 </div>
 
-<div class="list-group">
+<ul class="large-block-grid-3">
   {{#each recipe in model}}
-    {{#link-to 'recipes.show' recipe class="list-group-item"}}
-      {{recipe.name}}
-    {{/link-to}}
+    <li>
+      {{#link-to 'recipes.show' recipe class="list-group-item"}}{{recipe.name}}{{/link-to}}
+    </li>
   {{/each}}
-</div>
+</ul>
