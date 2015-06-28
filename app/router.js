@@ -8,7 +8,10 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('settings');
   this.route('chat');
-  this.route('books');
+  this.route('books', function() {
+    this.route('import');
+    this.route('show', { path: '/:id' });
+  });
   this.route('movies');
   this.route('login');
   this.route('recipes', function() {

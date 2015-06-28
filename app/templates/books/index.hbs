@@ -1,0 +1,20 @@
+<table>
+  <thead>
+  <tr>
+    <th>Autor</th>
+    <th>Title</th>
+    <th>ISBN</th>
+    <th>Typ</th>
+  </tr>
+  </thead>
+  <tbody>
+    {{#each model as |book|}}
+      {{#link-to 'books.show' book tagName="tr"}}
+        <td>{{book.author.fullname}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.isbn}}</td>
+        <td>{{book.type}}</td>
+      {{/link-to}}
+    {{/each}}
+  </tbody>
+</table>
